@@ -1,10 +1,51 @@
 # 🌤️ Weather App - Applicazione Meteo Moderna
 
-Un'applicazione web moderna e bellissima per consultare le previsioni meteo in tempo reale per qualsiasi città del mondo.
+Un'applicazione web moderna e bellissima per consultare le previsioni meteo in tempo reale per qualsiasi città del mondo con **sfondi dinamici ad alta qualità** che cambiano in base alla città cercata.
 
 ![Weather App](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Flask](https://img.shields.io/badge/Flask-3.0.0-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
+
+## ✨ Caratteristiche Principali
+
+- 🌍 **Ricerca globale**: Cerca il meteo per qualsiasi città nel mondo
+- 🖼️ **Sfondi dinamici**: Bellissime immagini HD delle città che cambiano con ogni ricerca grazie a LoremFlickr
+- 📍 **Geolocalizzazione**: Ottieni il meteo per la tua posizione corrente
+- 📅 **Previsioni 5 giorni**: Visualizza le previsioni meteo per i prossimi 5 giorni
+- 🎨 **Design moderno**: Interfaccia utente elegante con animazioni fluide e glassmorphism
+- 🌈 **Temi dinamici**: Colori adattivi in base alle condizioni meteo
+- 🏙️ **Città popolari**: Accesso rapido alle città più cercate
+- 📱 **Responsive**: Funziona perfettamente su desktop, tablet e smartphone
+- 📚 **Cache intelligente**: Dati meteorologici memorizzati per prestazioni ottimali
+- 🌙 **Fasi lunari**: Informazioni complete sulla luna e le maree
+- 📊 **Dati completi**: Umidità, velocità vento, precipitazioni, pressione atmosferica
+- 📚 **Cronologia ricerche**: Visualizza e ripeti facilmente le ricerche precedenti
+
+## 📁 Struttura del Repository
+
+```
+Progetto Generation AI/
+├── app.py                    # Applicazione Flask principale
+├── requirements.txt          # Dipendenze Python
+├── .env.example             # Template per variabili d'ambiente
+├── .gitignore               # Configurazione git
+├── README.md                # Questo file
+├── FINAL_REPORT.md          # Report del progetto
+├── TROUBLESHOOTING.md       # Guida alla risoluzione problemi
+│
+├── templates/               # Template HTML
+│   └── index.html          # Interfaccia principale
+│
+├── static/                  # File statici
+│   ├── css/
+│   │   └── style.css       # Stili CSS moderni e responsive
+│   ├── js/
+│   │   └── app.js          # Logica frontend e interazioni
+│   └── images/             # Icone e loghi
+│
+└── test*.py                 # Suite di test automatici
+```
 
 ## ✨ Caratteristiche
 
@@ -49,29 +90,22 @@ Per far funzionare l'applicazione, hai bisogno di una API key gratuita da OpenWe
 
 ⚠️ **Nota Importante**: La API key fornita nel file `meteo_api.env` potrebbe non essere valida o attiva. Per garantire il funzionamento dell'applicazione, ti consiglio di ottenere la tua API key personale seguendo i passi sopra.
 
-### Passo 2b: Abilitare le foto cartolina in tempo reale
-
-Per gli sfondi fotografici delle città puoi usare anche l'API gratuita di Pexels:
-
-1. Vai su [Pexels API](https://www.pexels.com/api/)
-2. Crea un account gratuito e genera la tua API key
-3. Inserisci la chiave nel file `.env` come `PEXELS_API_KEY=...`
-
-Se la chiave Pexels non è presente, l'app userà comunque gli sfondi di fallback già inclusi.
-
 ### Passo 3: Configurare la API Key
 
 Crea un file `.env` nella cartella del progetto (puoi copiare `.env.example`):
 
 ```bash
+# Windows
 copy .env.example .env
+
+# Linux/Mac
+cp .env.example .env
 ```
 
 Apri il file `.env` con un editor di testo e inserisci la tua API key:
 
 ```
 OPENWEATHER_API_KEY=la_tua_api_key_qui
-PEXELS_API_KEY=la_tua_pexels_api_key_qui
 FLASK_ENV=development
 SECRET_KEY=una_chiave_segreta_a_scelta
 ```
@@ -103,7 +137,7 @@ Apri il tuo browser preferito e vai all'indirizzo:
 http://localhost:5000
 ```
 
-🎉 **Fatto!** Ora puoi cercare qualsiasi città e vedere le previsioni meteo!
+🎉 **Fatto!** Ora puoi cercare qualsiasi città e vedere le previsioni meteo con bellissimi sfondi dinamici!
 
 ## 📖 Come Usare l'App
 
